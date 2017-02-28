@@ -72,8 +72,6 @@ int (^addOperationBlock)(int a, int b)
 利用C语言的类型定义给Block起一个易读的别名
 比如：
 
-一个初始的Block
-
 ```
 typedef int(^LHSomeBlock)(BOOL flag ,int value);
 
