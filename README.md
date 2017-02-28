@@ -54,7 +54,7 @@ int (^addOperationBlock)(int a, int b)
 	```
 
 ####特别说明：与函数的表示的差异
-[这里是两个C语言中函数和Block的应用例子]()
+
 >**Block与函数类似，只不过是直接定义在另一个函数里的，和定义它的那个函数共享同一个范围内的东西**
 
 - Block的定义是在某一个函数内的(回想一下以前使用Block的场景先)
@@ -62,6 +62,11 @@ int (^addOperationBlock)(int a, int b)
 - 函数的定义是独立在其他函数外部的
 
 - Block的特性，能够捕获它声明的范围内的所有变量（后面会再讲讲这一点）
+
+- 这里是两个C语言中函数和Block的应用例子
+
+	- [函数与Block的表达差异一](https://github.com/lyleLH/BlockIntro/blob/master/main_v1)
+	- [函数与Block的表达差异二](https://github.com/lyleLH/BlockIntro/blob/master/main_v2)
 
 ##Part2 Block的使用说明
 ####为Block创建typedef
