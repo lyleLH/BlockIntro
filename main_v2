@@ -1,0 +1,47 @@
+//
+//  main.m
+//  Block
+//
+//  Created by lyleKP on 2017/2/28.
+//  Copyright © 2017年 lyle. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+
+
+int sqrOfadd(int a,int b){
+    return (a + b)* (a + b);
+}
+
+
+void someFunction(){
+    int a = 10;
+    int b = 20;
+    int result = 0;
+    //接下来我想知道 a 与 b 的和
+    //1.a b 都在函数范围内，直接算
+//     result = (a + b)*(a + b); 搞定
+    //2.这个计算步骤可能会很常用于是我定义一个函数封装一下这个过程
+//    result =  sqrOfadd(a, b);
+    //3.直接使用Block。这种方式显得很没有必要
+    int (^sqrOfaddBlock)(int a,int b)=  ^(int a,int b){
+        return (a+b)*(a+b);
+    };
+    result = sqrOfaddBlock(a,b);
+    NSLog(@"add_operation result : %d",result);
+}
+
+
+int main(int argc, const char * argv[]) {
+    @autoreleasepool {
+        // insert code here...
+        NSLog(@"Hello, World!");
+        someFunction();
+        
+    }
+    
+    return 0;
+}
+
+
